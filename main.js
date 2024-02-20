@@ -4,7 +4,13 @@ function getPlayerChoise(){
 }
 
 function getComputerChoise(){
-    let result = Math.floor(Math.random * 3);
+    let result = Math.floor(Math.random() * 3);
+    if (result == 0)
+        return 'Rock';
+    else if (result == 1)
+        return 'Paper';
+    else if (result == 2)
+        return 'Scissors';
 }
 
 function playRound(playerSelection, computerSelection){
@@ -22,4 +28,9 @@ function playRound(playerSelection, computerSelection){
         return "You Lose";
     else if (playerSelection == 'Scissors' && computerSelection == 'Paper')
         return "You Win";
+}
+
+function playGame(){
+    for (let i = 0; i < 5; ++i)
+        alert(playRound(getPlayerChoise(), getComputerChoise()));
 }
