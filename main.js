@@ -29,8 +29,3 @@ function playRound(playerSelection, computerSelection){
     else if (playerSelection == 'Scissors' && computerSelection == 'Paper')
         return "You Win";
 }
-
-function playGame(){
-    for (let i = 0; i < 5; ++i)
-        alert(playRound(getPlayerChoise(), getComputerChoise()));
-}
